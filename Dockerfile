@@ -11,6 +11,7 @@ RUN pip install --no-cache-dir --upgrade pip && \
 COPY --chown=user . .
 # Switch to non-root user
 USER user
+ARG APP_PORT=7069
 # Set environment variables
 ENV HOME=/home/user \
     PATH=/home/user/.local/bin:$PATH \
